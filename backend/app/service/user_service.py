@@ -43,7 +43,7 @@ def get_user_by_email(email):
     return user
 
 
-def register(username, email, lastName, firstName, password, birthdate):
+def register(username, email, lastName, firstName, password):
     if User.query.filter_by(username=username).first() != None or User.query.filter_by(email=email).first() != None:
         abort(400, 'User already exist')
 
@@ -59,7 +59,6 @@ def register(username, email, lastName, firstName, password, birthdate):
     }
     return response_object, 201
 
-
 def login(email, password):
     user = get_user_by_email(email)
     password_matched_email = user.password
@@ -68,18 +67,6 @@ def login(email, password):
     token = create_token(email)
     return token, user.username
 
+def get_teams_by_username(username):
+    teams = None
 
-def update_user(token, firstName, lastName, birthdate):
-    user = get_user_from_token(token)
-
-    birthdate = dateutil.parser.parse(birthdate)
-    user.firstName = firstName
-    user.lastName = lastName
-    user.birthdate = birthdate
-    db.session.commit()
-
-    response_object = {
-        'status': 'success',
-        'message': 'Successfully updated'
-    }
-    return response_object, 201

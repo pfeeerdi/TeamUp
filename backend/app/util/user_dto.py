@@ -11,8 +11,11 @@ class UserDto():
         'join_date': fields.DateTime(readonly=True),
         'team_ids': fields.List(
             fields.Integer(attribute='team_id'),
-            attribute='trades'
+            attribute='teams'
         ),
+        'voted_surveys': fields.Integer(
+            attribute=lambda x: len(x.survey_votes)
+        )
     })
 
     model_profile = api.model('profile', {
