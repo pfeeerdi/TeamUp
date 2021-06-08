@@ -2,12 +2,12 @@ version: '3.8'
 
 services:
   frontend:
-    image: "github.com/pfeeerdi/TeamUp/tree/main/frontend"
+    image: "github.com/pfeeerdi/teamup/tree/main/frontend"
     ports:
       - "80:80"
 
   api:
-    image: "github.com/pfeeerdi/TeamUp/tree/main/backend"
+    image: "github.com/pfeeerdi/teamup/tree/main/backend"
     ports:
       - "5000:5000"
     depends_on:
