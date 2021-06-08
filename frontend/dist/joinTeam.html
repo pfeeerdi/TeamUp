@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Team anlegen</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="lib/jquery_v3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/img/up.svg">
+</head>
+  <body>
+    <section class="banner-newTeam" id="background">
+        <div class="container d-flex justify-content-center">
+            <div class="row">
+
+              <!-- Teamname -->
+              <div class="card text-center" id="newTeam-1">
+                <div class="card-head">
+                    <img src="assets/img/group.svg" id="teamsvg" height="100"alt=""> <h1>Teammitglied werden</h1>
+                    <p>Verrate uns wie Euer Teamcode lautet und lass Dich direkt hinzufügen</p>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="with-border form-group">
+                      <input type="text" id="joinTeam-code" class="form-control" value="" maxlength="30" required>
+                      <label class="control-label" for="newTeam-1-teamname">TeamCode</label>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="form-group button-row">
+                  <a href="index.html"><button class="btn-back" href="" id="backbutton-1">Zurück</button></a> 
+                  <button class="btn-forward" onclick="verifyTeamCode()" id="forwardbutton-1">Weiter</button> 
+                </div>
+              </div>
+
+              <!-- Teammitglieder -->
+              <div class="card text-center" id="newTeam-2">
+                <div class="card-head">
+                  <img src="assets/img/group.svg" height="100"alt=""> <h1>Wilkommen!</h1>
+                  <p>Lass dein Team wissen, wer Du bist. Dazu benötigen wir ein paar Infos von Dir!</p>
+                </div>
+                <br>
+                <div id="members">
+                  <div class="member">
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="with-border form-group">
+                          <input type="text" class="form-control" id="joinTeam-name" value="" maxlength="30" required>
+                          <label class="control-label" for="signupform-1-membername">Dein Name</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="members">
+                  <div class="member">
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="with-border form-group">
+                          <input type="text" class="form-control" id="joinTeam-email" value="" maxlength="30" required>
+                          <label class="control-label" for="signupform-1-membername">Deine Email</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="members">
+                  <div class="member">
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="with-border form-group">
+                          <input type="password" class="form-control" id="joinTeam-password" value="" maxlength="30" required>
+                          <label class="control-label" for="signupform-1-membername">Dein gewünschtes Password</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group button-row">
+                  <button class="btn-back" href="" id="backbutton-2">Zurück</button> 
+                  <button class="btn-forward" onclick="addTeamMember()" id="forwardbutton-2">Weiter</button> 
+                </div>
+              </div>
+
+              <!-- Meetingtime -->
+              <div class="card text-center" id="newTeam-3">
+                <div class="card-head">
+                    <img src="assets/img/group.svg" height="100" alt=""> <h1>Herzlich Willkommen</h1>
+                    <p>Perfekt! Das hat funktionert.</p>
+                </div>
+              
+
+                <div class="form-group button-row">
+                  <a href="index.html"><button class="btn-back" id="backbutton-3" href="" id="backbutton-3">Startseite</button></a>
+                </div>
+              </div>
+
+              
+
+            </div>    
+        </div>
+    </section>
+    <script>
+        $(document).ready(function () {
+
+        $("#backbutton-2").click(function () {
+            $("#newTeam-1").attr("style", "display:block");
+            $("#newTeam-2").attr("style", "display:none");
+            $("#newTeam-3").attr("style", "display:none");
+            $("#newTeam-4").attr("style", "display:none");
+        });
+        });
+
+    </script>
+ </body>
+ <script type="text/javascript" src="lib/loader.js"></script>
+</html>
+
+
