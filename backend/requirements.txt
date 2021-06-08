@@ -1,0 +1,27 @@
+aniso8601==9.0.1
+attrs==21.2.0
+bcrypt==3.2.0
+certifi==2020.12.5
+cffi==1.14.5
+click @ file:///home/linux1/recipes/ci/click_1610990599742/work
+cryptography==3.4.7
+Flask @ file:///home/ktietz/src/ci/flask_1611932660458/work
+Flask-Bcrypt==0.7.1
+Flask-Cors==3.0.10
+flask-restx==0.3.0
+Flask-SQLAlchemy==2.5.1
+greenlet==1.1.0
+itsdangerous @ file:///home/ktietz/src/ci/itsdangerous_1611932585308/work
+Jinja2 @ file:///tmp/build/80754af9/jinja2_1612213139570/work
+jsonschema==3.2.0
+jwt==1.2.0
+MarkupSafe @ file:///opt/concourse/worker/volumes/live/cb778296-98db-45ad-411e-6f726e102dc3/volume/markupsafe_1594371638608/work
+psycopg2-binary==2.8.6
+pycparser==2.20
+pylint==2.6.0
+pyrsistent==0.17.3
+python-dotenv==0.17.1
+pytz==2021.1
+six==1.15.0
+SQLAlchemy==1.4.14
+Werkzeug @ file:///home/ktietz/src/ci/werkzeug_1611932622770/work

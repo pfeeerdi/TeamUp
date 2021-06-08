@@ -2,12 +2,12 @@ version: '3.8'
 
 services:
   frontend:
-    image: "registry.gitlab.com/ronho1/coin-2-gether/frontend"
+    image: "github.com/pfeeerdi/TeamUp/tree/main/frontend"
     ports:
       - "80:80"
 
   api:
-    image: "registry.gitlab.com/ronho1/coin-2-gether/api"
+    image: "github.com/pfeeerdi/TeamUp/tree/main/backend"
     ports:
       - "5000:5000"
     depends_on:
